@@ -25,7 +25,7 @@ for ROI in dwi_*.nii.gz
 do
 	for MET in ${metric}
 	do
-		fslmaths ${!MET} -mul bin_${ROI} ${MET}_${ROI}
+		fslmaths ${!MET} -mul ${ROI} ${MET}_${ROI}
 	done
 done
 
