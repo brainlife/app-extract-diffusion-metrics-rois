@@ -8,6 +8,8 @@ fa=`jq -r '.fa' config.json`
 md=`jq -r '.md' config.json`
 rd=`jq -r '.rd' config.json`
 
+mkdir -p raw
+
 # set metrics for every situation
 if [ ! -f ${icvf} ]; then
 	metric="ad fa md rd"
