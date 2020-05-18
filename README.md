@@ -45,10 +45,11 @@ You can submit this App online at [https://doi.org/10.25663/brainlife.app.285](h
     "bvals":    "testdata/dwi/dwi.bvals",
     "bvecs":    "testdata/dwi/dwi.bvecs",
     "fa":    "testdata/tensor/fa.nii.gz",
- "icvf":    "testdata/noddi/icvf.nii.gz",
+    "icvf":    "testdata/noddi/icvf.nii.gz",
     "rois":    "testdata/rois/rois/",
     "inflate":    true,
-    "smooth":    1} 
+    "smooth":    1
+} 
 ``` 
 
 ### Sample Datasets 
