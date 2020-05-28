@@ -1,7 +1,7 @@
 #!/bin/bash
 
-icvf=`jq -r '.icvf' config.json`
-od=`jq -r '.od' config.json`
+ndi=`jq -r '.ndi' config.json`
+odi=`jq -r '.odi' config.json`
 isovf=`jq -r '.isovf' config.json`
 ad=`jq -r '.ad' config.json`
 fa=`jq -r '.fa' config.json`
@@ -11,14 +11,14 @@ rd=`jq -r '.rd' config.json`
 mkdir -p raw
 
 # set metrics for every situation
-if [ ! -f ${icvf} ]; then
+if [ ! -f ${ndi} ]; then
 	metric="ad fa md rd"
 	echo ${metric}
-elif [ -f ${icvf} ] && [ -f ${fa} ]; then
-	metric="icvf od isovf ad fa md rd"
+elif [ -f ${ndi} ] && [ -f ${fa} ]; then
+	metric="ndi odi isovf ad fa md rd"
 	echo ${metric}
 else
-	metric="icvf od isovf"
+	metric="ndi odi isovf"
 	echo ${metric}
 fi
 
