@@ -31,7 +31,7 @@ fi
 # extract tensor data in rois
 for ROI in dwi_*.nii.gz
 do
-	for MET in ${metric}
+	for MET in ${METRIC}
 	do
 		fslmaths ${!MET} -mul ${ROI} ${MET}_${ROI}
 	done
