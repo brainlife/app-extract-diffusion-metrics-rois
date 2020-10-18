@@ -81,8 +81,8 @@ The secondary output of this app is `product.json`. This file allows web interfa
 
 This App requires the following libraries when run locally. 
 
-- FSL: 
-- Freesurfer: 
-- Matlab: 
-- SPM8: 
-- jsonlab: 
+- FSL: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation
+- Freesurfer: https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall
+- Matlab: https://www.mathworks.com/help/install/install-products.html
+- SPM8: https://www.fil.ion.ucl.ac.uk/spm/software/spm8/
+- jsonlab: https://github.com/fangq/jsonlab
