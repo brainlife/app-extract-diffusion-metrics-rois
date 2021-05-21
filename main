@@ -14,7 +14,16 @@ time singularity exec -e -B `pwd`/license.txt:/usr/local/freesurfer/license.txt 
 # compute ROI metrics
 time singularity exec -e -B `pwd`/license.txt:/usr/local/freesurfer/license.txt docker://brainlife/connectome_workbench:1.4.2-freesurfer-update ./compute-stats-wb.sh
 
-mv *.nii.gz ./raw/
-rm -rf *.txt*
-exit 0
+# generate stats csv
+time singularity exec -e docker://brainlife/freesurfer-stats:1.2 ./generateCSV.py
+
+if [ -f ./parc-stats/MEAN.csv ]; then
+  mv *.nii.gz ./raw/
+  rm -rf *.txt*
+  echo "complete"
+  exit 0
+else
+  echo "something went wrong. check derivatives"
+  exit 1
+fi
 
