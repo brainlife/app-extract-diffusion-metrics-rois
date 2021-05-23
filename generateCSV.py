@@ -35,7 +35,7 @@ def generateSummaryCsvs(subjectID,diffusion_measures,summary_measures,columns,ou
 			df[metrics] = data
 			
 			# handle scaling issues
-			if np.median(df[metrics].astype(np.float)) < 0.01:
+			if np.nanmedian(df[metrics].astype(np.float)) < 0.01:
 				df[metrics] = df[metrics].astype(np.float) * 1000
 
 		# write out to csv
