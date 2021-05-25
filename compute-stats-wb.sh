@@ -47,7 +47,7 @@ do
 
 	for MET in ${METRIC}
 	do
-		metric=$(eval "echo \$${MET}")
+		metric=`eval 'echo ${MET}.nii.gz'`
 		for smeas in ${summ_measures}
 		do
 			value=`eval 'wb_command -volume-stats ${metric} -roi ${ROI} -reduce ${smeas}'`
