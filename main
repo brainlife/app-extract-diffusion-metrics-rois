@@ -18,7 +18,8 @@ time singularity exec -e -B `pwd`/license.txt:/usr/local/freesurfer/license.txt 
 time singularity exec -e docker://brainlife/freesurfer-stats:1.2 ./generateCSV.py
 
 if [ -f ./parc-stats/MEAN.csv ]; then
-  mkdir -p raw
+  mkdir -p raw parc-stats/parc-stats
+  mv parc-stats/*.csv parc-stats/parc-stats/
   mv *.nii.gz ./raw/
   rm -rf *.txt*
   echo "complete"
