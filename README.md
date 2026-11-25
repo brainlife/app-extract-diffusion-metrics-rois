@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-> 📍 **This branch, `v1.1`, runs 3 brainlife.io Apps** that share the same code:
+> **This branch, `v1.1`, runs 3 brainlife.io Apps** that share the same code:
 >
 > - Extract diffusion metrics inside ROIs - Deprecated ([doi:10.25663/brainlife.app.364](https://doi.org/10.25663/brainlife.app.364)) (deprecated)
 > - Extract diffusion metrics inside ROIs (NODDI) ([doi:10.25663/brainlife.app.363](https://doi.org/10.25663/brainlife.app.363)) (deprecated)
@@ -18,24 +18,24 @@
 >
 > The other Apps in this repository are listed under **Versions on brainlife.io** below.
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
-### 🧩 Extract diffusion metrics inside ROIs - Deprecated
+### Extract diffusion metrics inside ROIs - Deprecated
 
 > **This app will extracts diffusion metrics (tensor, NODDI) from within ROIs for ROI-level analysis using FSL. Will output metric x ROI NIFTI images. Takes in DWI, tensor, NODDI, and ROIs inputs and outputs a directory with the metric x ROI NIFTI images. Inflation can be performed on the ROIs using SPM.**
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/dwi` · `neuro/tensor` · `neuro/noddi` · `neuro/rois` |
-| 📤 **Outputs** | `raw` |
-| 🐳 **Container** | `brainlife/mcr:neurodebian1604-r2017a` |
-| ⚙️ **Resources** | 1 CPUs · 16 GB memory · 0.33 h walltime |
-| 🔑 **Requires** | `FREESURFER_LICENSE` |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.364](https://doi.org/10.25663/brainlife.app.364) |
+| **Inputs** | `neuro/dwi` · `neuro/tensor` · `neuro/noddi` · `neuro/rois` |
+| **Outputs** | `raw` |
+| **Container** | `brainlife/mcr:neurodebian1604-r2017a` |
+| **Resources** | 1 CPUs · 16 GB memory · 0.33 h walltime |
+| **Requires** | `FREESURFER_LICENSE` |
+| **Run it** | [doi.org/10.25663/brainlife.app.364](https://doi.org/10.25663/brainlife.app.364) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
@@ -44,14 +44,14 @@
 | `noddi` | `neuro/noddi` | yes | The path to the NODDI datatype files |
 | `rois` | `neuro/rois` | yes | The path to the top directory containing the ROIs within which diffusion metrics will be extracted |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `raw` | `raw` | Directory with NIFTI images of each diffusion metrics extracted in each ROI |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -60,20 +60,20 @@
 
 </details>
 
-### 🧩 Extract diffusion metrics inside ROIs (NODDI)
+### Extract diffusion metrics inside ROIs (NODDI)
 
 > **This app will extracts diffusion metrics (NODDI) from within ROIs for ROI-level analysis using FSL. Will output metric x ROI NIFTI images. Takes in DWI, tensor, NODDI, and ROIs inputs and outputs a directory with the metric x ROI NIFTI images. Inflation can be performed on the ROIs using SPM.**
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/dwi` · `neuro/noddi` · `neuro/rois` |
-| 📤 **Outputs** | `raw` |
-| 🐳 **Container** | `brainlife/mcr:neurodebian1604-r2017a` |
-| ⚙️ **Resources** | 1 CPUs · 16 GB memory · 0.33 h walltime |
-| 🔑 **Requires** | `FREESURFER_LICENSE` |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.363](https://doi.org/10.25663/brainlife.app.363) |
+| **Inputs** | `neuro/dwi` · `neuro/noddi` · `neuro/rois` |
+| **Outputs** | `raw` |
+| **Container** | `brainlife/mcr:neurodebian1604-r2017a` |
+| **Resources** | 1 CPUs · 16 GB memory · 0.33 h walltime |
+| **Requires** | `FREESURFER_LICENSE` |
+| **Run it** | [doi.org/10.25663/brainlife.app.363](https://doi.org/10.25663/brainlife.app.363) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
@@ -81,14 +81,14 @@
 | `noddi` | `neuro/noddi` | yes | The path to the NODDI datatype files |
 | `rois` | `neuro/rois` | yes | The path to the top directory containing the ROIs within which diffusion metrics will be extracted |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `raw` | `raw` | Directory with NIFTI images of each diffusion metrics extracted in each ROI |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -97,20 +97,20 @@
 
 </details>
 
-### 🧩 Extract diffusion metrics inside ROIs (DTI)
+### Extract diffusion metrics inside ROIs (DTI)
 
 > **This app will extracts diffusion metrics (tensor) from within ROIs for ROI-level analysis using FSL. Will output metric x ROI NIFTI images. Takes in DWI, tensor, NODDI, and ROIs inputs and outputs a directory with the metric x ROI NIFTI images. Inflation can be performed on the ROIs using SPM.**
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/dwi` · `neuro/tensor` · `neuro/rois` |
-| 📤 **Outputs** | `raw` |
-| 🐳 **Container** | `brainlife/mcr:neurodebian1604-r2017a` |
-| ⚙️ **Resources** | 1 CPUs · 16 GB memory · 0.33 h walltime |
-| 🔑 **Requires** | `FREESURFER_LICENSE` |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.283](https://doi.org/10.25663/brainlife.app.283) |
+| **Inputs** | `neuro/dwi` · `neuro/tensor` · `neuro/rois` |
+| **Outputs** | `raw` |
+| **Container** | `brainlife/mcr:neurodebian1604-r2017a` |
+| **Resources** | 1 CPUs · 16 GB memory · 0.33 h walltime |
+| **Requires** | `FREESURFER_LICENSE` |
+| **Run it** | [doi.org/10.25663/brainlife.app.283](https://doi.org/10.25663/brainlife.app.283) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
@@ -118,14 +118,14 @@
 | `tensor` | `neuro/tensor` | yes | The path to the tensor datatype files |
 | `rois` | `neuro/rois` | yes | The path to the top directory containing the ROIs within which diffusion metrics will be extracted |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `raw` | `raw` | Directory with NIFTI images of each diffusion metrics extracted in each ROI |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -136,7 +136,7 @@
 
 <!-- brainlife-app:end -->
 
-## 🏷️ Versions on brainlife.io
+## Versions on brainlife.io
 
 Each version is a separate App on brainlife.io, built from a branch of this repository. Only the newest App is maintained; the older Apps wrote metric x ROI NIfTI images rather than statistics tables.
 
@@ -149,13 +149,13 @@ Each version is a separate App on brainlife.io, built from a branch of this repo
 | Extract diffusion metrics inside ROIs - Deprecated | tensor and NODDI (old NODDI datatype) | [`v1.0`](https://github.com/brainlife/app-extract-diffusion-metrics-rois/tree/v1.0) | [doi:10.25663/brainlife.app.285](https://doi.org/10.25663/brainlife.app.285) | deprecated |
 | Extract diffusion metrics inside ROIs (NODDI) - Deprecated | NODDI (old NODDI datatype) | [`v1.0`](https://github.com/brainlife/app-extract-diffusion-metrics-rois/tree/v1.0) | [doi:10.25663/brainlife.app.284](https://doi.org/10.25663/brainlife.app.284) | deprecated |
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.525](https://doi.org/10.25663/brainlife.app.525), choose a DWI dataset, its tensor maps, a set of ROIs (`neuro/rois`) and, optionally, NODDI maps and a myelin map from your project, decide whether to inflate the ROIs, and press **Execute**. The output is a `neuro/parc-stats` dataset of CSV tables with one row per ROI and one column per metric.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/), [`jq`](https://jqlang.github.io/jq/) and a [FreeSurfer license](https://surfer.nmr.mgh.harvard.edu/registration.html) (the ROIs and maps are resampled with FreeSurfer `mri_vol2vol`). The containers are pulled from Docker Hub on first use.
 
@@ -188,7 +188,7 @@ You need [Singularity/Apptainer](https://apptainer.org/), [`jq`](https://jqlang.
    ./main
    ```
 
-### 🧪 Sample data
+### Sample data
 
 Download sample datasets from brainlife.io with the [brainlife CLI](https://github.com/brainlife/cli):
 
@@ -199,7 +199,7 @@ mkdir input
 bl dataset download <dataset id>
 ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 parc-stats/
@@ -216,12 +216,12 @@ raw/          ROIs and metric maps resampled to the DWI grid
 
 Each CSV has one row per ROI (`subjectID`, `structureID`, `nodeID`) and one column per metric (`ad`, `fa`, `md`, `rd`, and `ga`, `ak`, `mk`, `rk`, `ndi`, `isovf`, `odi`, `myelin` when present). Metrics whose median is below 0.01, such as diffusivities in mm²/s, are multiplied by 1000.
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **`something went wrong. check derivatives`**: `parc-stats/MEAN.csv` was not produced. The ROIs are resampled to the DWI with `--regheader`, so the ROIs and metric maps must already be in the same space as the DWI; check the logs.
 - **ROI inflation**: when `inflate` is set, `smooth` is the box-kernel size used to inflate the ROIs and must be an odd number.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -235,13 +235,13 @@ Each CSV has one row per ROI (`subjectID`, `structureID`, `nodeID`) and one colu
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 - Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. *Scientific Data* 6:69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
-## 👥 Authors
+## Authors
 
 - Brad Caron
 
 **Contributors:** Soichi Hayashi
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -260,6 +260,6 @@ Each CSV has one row per ROI (`subjectID`, `structureID`, `nodeID`) and one colu
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](LICENSE). FreeSurfer is distributed under its own [license](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSoftwareLicense).
