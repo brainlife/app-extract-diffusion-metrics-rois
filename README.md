@@ -3,6 +3,35 @@
 
 # Extract diffusion metrics inside ROIs 
 
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Extracts summary statistics (min, max, mean, median, mode, SD, non-zero count) of tensor, NODDI and myelin maps inside each ROI with Connectome Workbench, as CSVs.**
+
+Optionally inflates the ROIs (MATLAB smooth3), resamples ROIs and metric maps to the DWI grid with FreeSurfer mri_vol2vol, computes per-ROI statistics with wb_command -volume-stats, and writes one CSV per statistic. Values of metrics whose median is below 0.01 (for example diffusivities in mm2/s) are multiplied by 1000.
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.525](https://doi.org/10.25663/brainlife.app.525)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `dwi` | `neuro/dwi` | yes | The path to the DWI datatype |
+| `tensor` | `neuro/tensor` | yes | The path to the tensor datatype files |
+| `noddi` | `neuro/noddi` | no | The path to the NODDI datatype files |
+| `myelin` | `neuro/myelin-map` | no | Optional myelin map, resampled to the DWI grid like the diffusion maps. |
+| `rois` | `neuro/rois` | yes | The path to the top directory containing the ROIs within which diffusion metrics will be extracted. ROIs must be in the same space as the DWI (resampled with --regheader). |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `parc-stats` | `neuro/parc-stats` | Directory of CSVs (MIN, MAX, MEAN, MEDIAN, MODE, STDEV, COUNT_NONZERO) with one row per ROI and one column per metric. |
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| `inflate` | boolean | `false` | Inflate (smooth and re-binarise) the ROIs before extracting metrics. |
+| `smooth` | number | `1` | Box-kernel size for ROI inflation (odd number); used only when inflate is true. |
+
+Runtime: container `brainlife/mcr:neurodebian1604-r2017a`; 1 CPUs; 16 GB memory; 0.33 h walltime; needs `FREESURFER_LICENSE`.
+
+<!-- brainlife-app:end -->
+
 This app will extracts diffusion metrics (tensor, NODDI) from within ROIs for ROI-level analysis using FSL. Will output metric x ROI NIFTI images. Takes in DWI, tensor, NODDI, and ROIs inputs and outputs a directory with the metric x ROI NIFTI images. Inflation can be performed on the ROIs using SPM. 
 
 ### Authors 
